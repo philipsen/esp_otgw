@@ -1,9 +1,16 @@
 #include <opentherm.h>
 
+#ifdef ESP8266
+#define THERMOSTAT_IN D0
+#define THERMOSTAT_OUT D1
+#define BOILER_IN D2
+#define BOILER_OUT D4
+#else
 #define THERMOSTAT_IN 2
 #define THERMOSTAT_OUT 4
 #define BOILER_IN 3
 #define BOILER_OUT 5
+#endif
 
 OpenthermData message;
 
